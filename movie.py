@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 
 # crawl IMDB Top 250 and randomly select a movie
 
-URL = 'https://imdb.com/chart/top'
+URL = 'http://www.imdb.com/chart/top'
 
 def main():
     response = requests.get(URL)
@@ -30,14 +30,14 @@ def main():
 
     n_movies = len(titles)
 
-    while(True):
-        idx = random.randrange(0, n_movies)
+    #while(True):
+    idx = random.randrange(0, n_movies)
         
-        print(f'{titles[idx]} {years[idx]}, Rating: {ratings[idx]:.1f}, Starring: {actors_list[idx]}')
+    print(f'{titles[idx]} {years[idx]}, Rating: {ratings[idx]:.1f}, Starring: {actors_list[idx]}')
 
-        user_input = input('Thes na sou proteinw ki alli tainia (y/[n])? ')
-        if user_input != 'y':
-            break
+        #user_input = input('Do you want another movie (y/[n])? ')
+        #if user_input != 'y':
+        #     break
     
 
 if __name__ == '__main__':
