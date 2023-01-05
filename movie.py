@@ -35,7 +35,7 @@ def main():
         
         print(f'{titles[idx]} {years[idx]}, Rating: {ratings[idx]:.1f}, Starring: {actors_list[idx]}')
 
-        user_input = input('Do you want another movie (y/[n])? ')
+        user_input = input('Thes na sou proteinw ki alli tainia (y/[n])? ')
         if user_input != 'y':
             break
     
